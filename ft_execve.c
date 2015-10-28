@@ -31,7 +31,10 @@ static int	ft_strjoin_path(char **path, char *arg, char *buff)
 
 static void	ft_execve_error(char *s1, char *s2)
 {
-	ft_dprintf(2, "ft_script: %s%s\n", s1, s2);
+	ft_putstr_fd("ft_script: ", 2);
+	ft_putstr_fd(s1, 2);
+	ft_putstr_fd(s2, 2);
+	ft_putchar_fd('\n', 2);
 	_exit(EXIT_FAILURE);
 }
 

@@ -6,7 +6,7 @@
 /*   By: vroche <vroche@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/02 16:50:47 by vroche            #+#    #+#             */
-/*   Updated: 2015/10/28 19:02:55 by vroche           ###   ########.fr       */
+/*   Updated: 2015/10/28 19:33:02 by vroche           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <unistd.h>
 # include <time.h>
 # include "libft.h"
-# include "ft_printf.h"
 
 # define PTY_BASE "/dev/pty"
 # define TTY_BASE "/dev/tty"

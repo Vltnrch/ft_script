@@ -14,7 +14,10 @@
 
 static void	ft_usage(char *arg, char c)
 {
-	ft_dprintf(2, "%s: illegal option -- %c\n", arg, c);
+	ft_putstr_fd(arg, 2);
+	ft_putstr_fd(": illegal option -- ", 2);
+	ft_putchar_fd(c, 2);
+	ft_putchar_fd('\n', 2);
 	ft_putstr_fd("usage: ft_script [-aq] [file [command ...]]\n", 2);
 }
 

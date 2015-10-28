@@ -72,8 +72,11 @@ static void	ft_print_time(t_scrpt *scrpt, char *file)
 	time_t			t;
 
 	t = time(NULL);
-	ft_printf("Script started, output file is %s\n", file);
-	ft_dprintf(scrpt->filefd, "Script started on %s", ctime(&t));
+	ft_putstr("Script started, output file is ");
+	ft_putstr(file);
+	ft_putchar('\n');
+	ft_putstr_fd("Script started on ", scrpt->filefd);
+	ft_putstr_fd(ctime(&t), scrpt->filefd);
 }
 
 void		ft_script_daddy(int ptyfd, int *opt, char *file)

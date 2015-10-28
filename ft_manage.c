@@ -35,8 +35,11 @@ void	ft_script_exit(struct termios *t, char *file, int filefd, int *opt)
 	if (!opt[1])
 	{
 		ti = time(NULL);
-		ft_dprintf(filefd, "\nScript done on %s", ctime(&ti));
-		ft_printf("\nScript done, output file is %s\n", file);
+		ft_putstr_fd("\nScript done on ", filefd);
+		ft_putstr_fd(ctime(&ti), filefd);
+		ft_putstr("\nScript done, output file is ");
+		ft_putstr(file);
+		ft_putchar('\n');
 	}
 	_exit(EXIT_SUCCESS);
 }
